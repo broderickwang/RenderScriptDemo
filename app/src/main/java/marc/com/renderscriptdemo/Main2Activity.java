@@ -96,6 +96,7 @@ public class Main2Activity extends AppCompatActivity {
 	public boolean onTouchEvent(MotionEvent event) {
 		switch (event.getAction()){
 			case MotionEvent.EDGE_TOP:
+				mOriginImg.setAlpha((int) (255 - 100 * 2.55));
 				/*WindowManager wm = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
 				Display display = wm.getDefaultDisplay();
 				Point point = new Point();
@@ -109,6 +110,9 @@ public class Main2Activity extends AppCompatActivity {
 // 应用更改设置
 				imageView.requestLayout();*/
 
+				break;
+			case MotionEvent.EDGE_BOTTOM:
+				mOriginImg.setAlpha((int) (255 - 0 * 2.55));
 				break;
 		}
 		return super.onTouchEvent(event);
